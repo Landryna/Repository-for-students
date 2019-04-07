@@ -1,0 +1,16 @@
+{% extends 'base_layout.html'%}
+{% block content %}
+  <h1>
+  "Just remember, life is like a box of chocolates..."
+  
+  </h1>
+  
+  <h5>
+  (Pamiętaj,aby nazwać się przyzwoicie!) </h5>
+  <form class="site-form" action="/accounts/signup/" method="post">
+    {% csrf_token %}
+    {{form}}
+  <input type="submit" value="Stwórz konto">
+  </form>
+ 
+{% endblock%}

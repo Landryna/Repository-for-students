@@ -1,0 +1,23 @@
+{% extends 'base_layout.html'%}
+
+{% block content %}
+
+  <h1>
+  Repozytorium sprawozdań IS 
+  </h1>
+  <div class="articles">
+  {% for article in articles %}
+   <div class='article'>
+        <h2><a href="{% url 'articles:detail' slug=article.slug%}">{{article.nazwa}}</a></h2>
+		<p>{{article.snippet}}</p>
+		<p>{{article.date}}</p>
+		<h3>Grupa:{{article.grupa}}</h3>
+		<p class="autor"> Dodany przez {{article.autor}}</p>
+		</div>
+  
+  {% endfor %}
+ 
+ {% endblock %}
+
+  
+  

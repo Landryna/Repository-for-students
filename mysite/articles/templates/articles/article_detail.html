@@ -1,0 +1,15 @@
+{% extends 'base_layout.html'%}
+
+{%block content%}
+<div class="article-detail">
+<div class = "article">
+<h2>{{article.nazwa}}</h2>
+<p>{{article.komentarz}}</p>
+<p>{{article.date}}</p>
+<p>Grupa:{{article.grupa}}</p>
+<p>Wybrany plik:{{article.file}}</p>
+<p>Ocena:{{article.ocena}}</p>
+
+</div>
+</div>
+{%endblock%}

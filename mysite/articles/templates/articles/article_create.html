@@ -1,0 +1,20 @@
+{% extends 'base_layout.html' %}
+
+
+{% block content %}
+ <div class="create-article">
+ 
+ <h3>Jesteś teraz w trakcie dodawania sprawozdania.Gratulację! Widać, że Ci zależy.
+Pamiętaj natomiast by odpowiednio nazwać swój plik = Imię_Nazwisko_Lab'numer'
+(NIE ZMIENIAJ NIC W POLU 'SLUG') </h3>
+<h4> Przykład: Jan_Nowak_Lab1 </h4>
+<h6> Nie zwracaj uwagi na pole "slug" służy do odpowiedniego nazywania Twojego wpisu.NIE NALEŻY GO MODYFIKOWAĆ </h6>
+ <form class="site-form" action="/articles/create/" method="post" enctype="multipart/form-data">
+ {% csrf_token %}
+ {{form}}
+ <input type="submit" value="Dodaj sprawozdanie">
+ 
+ </form>
+ </div>
+ <script src="/static/slugify.js"></script>
+{% endblock %}
